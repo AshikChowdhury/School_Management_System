@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>School Management</title>
+<link rel="shortcut icon" href="images/demo/favicon.ico" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all"> -->
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+ 
+
+</head>
+
+<body>
+
+<div class="aa">
+<h2> Admin Login</h2>
+
+	<form id="loginForm">
+		<label>Username</label><br>
+		<input type="text" id="txtuser" placeholder="Enter Username"><br><br>
+		<label>Password</label><br>
+		<input type="password" id="txtpass" placeholder="Enter Password"><br><br>
+		<input type="submit" value="Login"><br>
+		<!-- <input type="reset" value="Clear" /> -->
+
+	</form>
+
+</div>
+<script type="text/javascript">
+	function checkData( )
+	{
+	   var txtuser = document.getElementById("txtuser").value;
+	   var txtpass = document.getElementById("txtpass").value;
+	   if (txtpass == "" && txtuser == "") {
+	      alert("Username and Password must not be blank!");
+	      return false; 
+	   }
+	   if(txtuser == "")
+	   {
+	      alert("Username must not be blank!");
+	      return false;
+	   }
+	   else if(txtpass == "")
+	   {
+	      alert("Password must not be blank!");
+	      return false;
+	   }
+	   
+	}
+	document.getElementById("loginForm").onsubmit = checkData;
+</script>
+
+</body>
+</html>
